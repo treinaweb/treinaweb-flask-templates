@@ -23,9 +23,9 @@ def cadastrar_cliente():
         except:
             print("Cliente não cadastrado")
 
-    return
+    return render_template('clientes/cadastrar_cliente.html')
 
 @app.route("/listar_clientes", methods=["GET"])
 def listar_clientes():
     clientes = cliente_service.listar_clientes()
-    return
+    return render_template('clientes/lista_clientes.html')
