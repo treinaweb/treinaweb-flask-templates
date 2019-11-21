@@ -10,7 +10,25 @@
 <main>
 
 <form method="post">
-    <h2>AQUI VAI O FORMULÁRIO DE CADASTRO DE CLIENTES</h2>
+    {{form_template.csrf_token}}
+
+    <div>
+        <label>Nome: </label>
+        {{form_template.nome}}
+    </div>
+    <div>
+        <label>Email: </label>
+        {{form_template.email}}
+    </div>
+    <div>
+        <label>Data de Nascimento: </label>
+        {{form_template.data_nascimento}}
+    </div>
+    <div>
+        <label>Profissão: </label>
+        {{form_template.profissao}}
+    </div>
+
 
     <button class="btn btn-primary" type="submit">Cadastrar</button>
 
