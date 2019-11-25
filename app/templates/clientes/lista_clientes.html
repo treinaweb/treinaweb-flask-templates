@@ -21,8 +21,13 @@
     <tbody>
     {% for i in clientes_template %}
         <tr>
-            {{loop.first}}
-            Há {{loop.length}} clientes cadastrados
+            {% if loop.first %}
+                Primeira iteração
+                Há {{loop.length}} clientes cadastrados
+            {% elif loop.first == False  %}
+            {# {% else  %} #}
+                Não é a primeira iteração
+            {% endif %}
             <td>{{loop.index0}}</td>
             <td>{{i.nome}}</td>
             <td>{{i.data_nascimento}}</td>
