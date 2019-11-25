@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>
-        Cadastro de clientes
-    </title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+{% extends "clientes/base.html" %}
 
-</head>
-<body>
-<main>
-
+{% block conteudo %}
 <form method="post">
     {{form_template.csrf_token}}
 
@@ -35,7 +25,5 @@
     <button class="btn btn-primary" type="submit">Cadastrar</button>
 
 </form>
-</main>
 
-</body>
-</html>
+{% endblock conteudo %}

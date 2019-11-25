@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>
-        Listagem de clientes
-    </title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
-</head>
-<body>
-<main>
+{% extends "clientes/base.html" %}
 
+{% block conteudo %}
 <table class="table table-striped">
     <thead>
         <tr>
@@ -38,11 +29,6 @@
     </tbody>
 
 </table>
-<a href="#"><button>Cadastrar Cliente</button></a>
-</main>
+<a href="{{ url_for('cadastrar_cliente') }}"><button class="btn btn-primary">Cadastrar Cliente</button></a>
 
-<script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
-
-</body>
-</html>
-
+{% endblock conteudo %}
