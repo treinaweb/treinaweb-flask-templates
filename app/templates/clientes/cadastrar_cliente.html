@@ -5,6 +5,8 @@
     <title>
         Cadastro de clientes
     </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
 </head>
 <body>
 <main>
@@ -12,21 +14,21 @@
 <form method="post">
     {{form_template.csrf_token}}
 
-    <div>
+    <div class="form-group">
         <label>Nome: </label>
-        {{form_template.nome}}
+        {{form_template.nome(class='form-control')}}
     </div>
-    <div>
+    <div class="form-group">
         <label>Email: </label>
-        {{form_template.email}}
+        {{form_template.email(class='form-control')}}
     </div>
-    <div>
+    <div class="form-group">
         <label>Data de Nascimento: </label>
-        {{form_template.data_nascimento}}
+        {{form_template.data_nascimento(class='form-control')}}
     </div>
-    <div>
+    <div class="form-group">
         <label>Profissão: </label>
-        {{form_template.profissao}}
+        {{form_template.profissao(class='form-control')}}
     </div>
 
 

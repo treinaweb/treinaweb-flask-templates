@@ -5,11 +5,12 @@
     <title>
         Listagem de clientes
     </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
 </head>
 <body>
 <main>
 
-<table class="table">
+<table class="table table-striped">
     <thead>
         <tr>
             <th>#</th>
@@ -39,6 +40,8 @@
 </table>
 <a href="#"><button>Cadastrar Cliente</button></a>
 </main>
+
+<script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
 
 </body>
 </html>
