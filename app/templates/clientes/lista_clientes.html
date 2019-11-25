@@ -18,16 +18,13 @@
         </tr>
     </thead>
     <tbody>
+    {% for i in clientes_template %}
         <tr>
-            <td>{{clientes_template[0].nome}}</td>
-            <td>{{clientes_template[0].data_nascimento}}</td>
-            <td>{{clientes_template[0].profissao}}</td>
+            <td>{{i.nome}}</td>
+            <td>{{i.data_nascimento}}</td>
+            <td>{{i.profissao}}</td>
         </tr>
-        <tr>
-            <td>{{clientes_template[1].nome}}</td>
-            <td>{{clientes_template[1].data_nascimento}}</td>
-            <td>{{clientes_template[1].profissao}}</td>
-        </tr>
+    {% endfor %}
     </tbody>
 
 </table>
