@@ -12,5 +12,6 @@ migrate = Migrate(app, db)
 csrf = CSRFProtect(app)
 csrf.init_app(app)
 
+from .utils import filters
 from .views import cliente_view
 from .models import cliente_model

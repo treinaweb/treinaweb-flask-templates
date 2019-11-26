@@ -11,7 +11,7 @@
             <td>{{loop.index0}}</td>
             #}
             <td>{{cliente.nome|lower}}</td>
-            <td>{{cliente.data_nascimento}}</td>
+            <td>{{cliente.data_nascimento|format_date}}</td>
             <td>{{cliente.profissao|default('Profissão não cadastrada', true)}}</td>
 
         </tr>
