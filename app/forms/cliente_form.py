@@ -8,4 +8,4 @@ class ClienteForm(FlaskForm):
     nome = StringField("nome", validators=[DataRequired()])
     email = EmailField("email", validators=[Email(), DataRequired()])
     data_nascimento = DateField("data_nascimento", validators=[DataRequired()], format='%d/%m/%Y')
-    profissao = StringField("profissao", validators=[DataRequired()])
+    profissao = StringField("profissao")
