@@ -1,0 +1,17 @@
+{% macro show_clientes(cliente) %}
+        <tr>
+            {#
+            {% if loop.first %}
+                Primeira iteração
+                Há {{loop.length}} clientes cadastrados
+            {% elif loop.first == False  %}
+                Não é a primeira iteração
+            {% endif %}
+
+            <td>{{loop.index0}}</td>
+            #}
+            <td>{{cliente.nome}}</td>
+            <td>{{cliente.data_nascimento}}</td>
+            <td>{{cliente.profissao}}</td>
+        </tr>
+{% endmacro %}

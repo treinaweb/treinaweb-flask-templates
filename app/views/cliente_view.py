@@ -9,6 +9,7 @@ from app.services import cliente_service
 
 @app.route("/cadastrar_cliente", methods=["GET", "POST"])
 def cadastrar_cliente():
+    clientes = cliente_service.listar_clientes()
     form = cliente_form.ClienteForm()
     if form.validate_on_submit():
         nome = form.nome.data
@@ -23,7 +24,7 @@ def cadastrar_cliente():
         except:
             print("Cliente não cadastrado")
 
-    return render_template('clientes/cadastrar_cliente.html', form_template=form)
+    return render_template('clientes/cadastrar_cliente.html', form_template=form, clientes_template=clientes)
 
 @app.route("/listar_clientes", methods=["GET"])
 def listar_clientes():
