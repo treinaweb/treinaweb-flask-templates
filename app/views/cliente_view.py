@@ -1,4 +1,4 @@
-from flask import render_template, redirect, url_for, request
+from flask import render_template, redirect, url_for, request, session
 
 from app.forms import cliente_form
 
@@ -9,7 +9,9 @@ from app.services import cliente_service
 
 @babel.localeselector
 def get_locale():
-    return 'pt'
+    if request.args.get('lang'):
+        session['lang'] = request.args.get('lang')
+    return session.get('lang', 'pt')
 
 @app.route("/cadastrar_cliente", methods=["GET", "POST"])
 def cadastrar_cliente():
