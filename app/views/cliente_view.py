@@ -2,10 +2,14 @@ from flask import render_template, redirect, url_for, request
 
 from app.forms import cliente_form
 
-from app import app
+from app import app, babel
 from app.models import cliente_model
 from app.entidades import cliente
 from app.services import cliente_service
+
+@babel.localeselector
+def get_locale():
+    return 'pt'
 
 @app.route("/cadastrar_cliente", methods=["GET", "POST"])
 def cadastrar_cliente():

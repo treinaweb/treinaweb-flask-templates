@@ -6,9 +6,9 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>Nome</th>
-            <th>Data de Nascimento</th>
-            <th>Profissão</th>
+            <th>{{_('Nome')}}</th>
+            <th>{{_('Data de Nascimento')}}</th>
+            <th>{{_('Profissão')}}</th>
         </tr>
     </thead>
     <tbody>
@@ -19,6 +19,6 @@
 
 </table>
 
-<a href="{{ url_for('cadastrar_cliente') }}"><button class="btn btn-primary">Cadastrar Cliente</button></a>
+<a href="{{ url_for('cadastrar_cliente') }}"><button class="btn btn-primary">{{_('Cadastrar Cliente')}}</button></a>
 
 {% endblock conteudo %}
