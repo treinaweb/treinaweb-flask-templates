@@ -8,18 +8,22 @@
     {{form_template.csrf_token}}
 
     <div class="form-group">
+        {{form_template.errors.nome}}
         <label>Nome: </label>
         {{form_template.nome(class='form-control')}}
     </div>
     <div class="form-group">
+        {{form_template.errors.email}}
         <label>Email: </label>
         {{form_template.email(class='form-control')}}
     </div>
     <div class="form-group">
+        {{form_template.errors.data_nascimento}}
         <label>Data de Nascimento: </label>
         {{form_template.data_nascimento(class='form-control')}}
     </div>
     <div class="form-group">
+        {{form_template.errors.profissao}}
         <label>Profissão: </label>
         {{form_template.profissao(class='form-control')}}
     </div>
